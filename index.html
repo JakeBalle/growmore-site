@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>GrowMore Soil & Pasture Tuning</title>
+
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+  <!-- LANDING (loads immediately, always visible) -->
+  <main id="landing" class="show">
+    <img src="assets/growmore_logo.png" class="logo" alt="GrowMore Soil & Pasture Tuning">
+    
+    <p class="product">GrowMore Virtual Agronomist</p>
+    <p class="launch">Mobile App launching soon</p>
+  </main>
+
+  <!-- SPLASH OVERLAY (plays over landing, then disappears) -->
+  <div id="splash" aria-hidden="true">
+    <video id="splashVideo" autoplay muted playsinline preload="auto">
+      <source src="assets/Splash.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <script>
+    const splash = document.getElementById("splash");
+    const video = document.getElementById("splashVideo");
+
+    let dismissed = false;
+
+    function dismissSplash() {
+    if (dismissed) return;
+    dismissed = true;
+
+    splash.classList.add("fade");
+
+    setTimeout(() => {
+        splash.remove();
+    }, 700);
+    }
+
+    // dismiss when video finishes
+    video.addEventListener("ended", dismissSplash);
+
+    // if video errors
+    video.addEventListener("error", dismissSplash);
+
+    // fallback if video somehow never finishes
+    setTimeout(dismissSplash, 8000);
+    
+    
+  </script>
+
+</body>
+</html>
