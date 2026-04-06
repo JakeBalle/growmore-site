@@ -1,22 +1,27 @@
 function toggleMenu() {
     const nav = document.getElementById('navLinks');
-    if (nav) {
-        nav.classList.toggle('active');
-    }
+
+    if (!nav) return;
+
+    nav.classList.toggle('active');
 }
 
-window.addEventListener('DOMContentLoaded', () => {
+/* CRITICAL FIX — reset menu state on every page load */
+window.addEventListener('pageshow', () => {
     const nav = document.getElementById('navLinks');
+
     if (nav) {
         nav.classList.remove('active');
     }
+});
 
-    document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', () => {
-            const navLinks = document.getElementById('navLinks');
-            if (navLinks) {
-                navLinks.classList.remove('active');
-            }
-        });
+/* close menu when clicking a link */
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        const nav = document.getElementById('navLinks');
+
+        if (nav) {
+            nav.classList.remove('active');
+        }
     });
 });
