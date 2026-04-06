@@ -29,13 +29,15 @@ body{
     box-sizing:border-box;
 }
 
+/* logo */
+
 .logo{
     width:min(650px,85vw);
     height:auto;
     margin-bottom:30px;
 }
 
-/* ===== HEADINGS ===== */
+/* headings */
 
 h1{
     font-size:30px;
@@ -54,7 +56,7 @@ h1{
     opacity:0.85;
 }
 
-/* ===== SPLASH ===== */
+/* ===== SPLASH VIDEO ===== */
 
 #splash{
     position:fixed;
@@ -66,9 +68,13 @@ h1{
     transition:opacity .7s ease;
 }
 
+/* fade out animation */
+
 #splash.fade{
     opacity:0;
 }
+
+/* splash video scaling */
 
 #splash video{
     position:absolute;
@@ -76,9 +82,12 @@ h1{
     width:100%;
     height:100%;
     object-fit:cover;
+    object-position:center;
 }
 
-/* ===== NAV ===== */
+/* REMOVE GLOBAL VIDEO RULE (WAS BREAKING LAYOUT) */
+
+/* ===== NAV (FIXED) ===== */
 
 .nav{
     position:sticky;
@@ -95,17 +104,15 @@ h1{
     display:flex;
     align-items:center;
     justify-content:space-between;
+    box-sizing:border-box;
 }
 
 .nav-logo a{
-    display:flex;
-    align-items:center;
-}
-
-.nav-logo img{
-    height:56px;
-    width:auto;
-    display:block;
+    color:#fff;
+    text-decoration:none;
+    font-weight:700;
+    font-size:16px;
+    letter-spacing:1px;
 }
 
 .nav-links{
@@ -118,98 +125,46 @@ h1{
     text-decoration:none;
     font-size:14px;
     opacity:0.85;
-    transition:opacity 0.2s ease;
 }
 
 .nav-links a:hover{
     opacity:1;
 }
 
-/* ===== HAMBURGER ===== */
+/* ===== MOBILE MENU ===== */
 
 .menu-toggle{
     display:none;
-    width:28px;
-    height:22px;
-    position:relative;
+    font-size:24px;
     cursor:pointer;
+    color:#fff;
 }
-
-.menu-toggle span{
-    position:absolute;
-    width:100%;
-    height:2px;
-    background:#fff;
-    left:0;
-    transition:all 0.3s ease;
-}
-
-.menu-toggle span:nth-child(1){ top:0; }
-.menu-toggle span:nth-child(2){ top:10px; }
-.menu-toggle span:nth-child(3){ top:20px; }
-
-/* animate to X */
-.menu-toggle.active span:nth-child(1){
-    transform:rotate(45deg);
-    top:10px;
-}
-
-.menu-toggle.active span:nth-child(2){
-    opacity:0;
-}
-
-.menu-toggle.active span:nth-child(3){
-    transform:rotate(-45deg);
-    top:10px;
-}
-
-/* ===== MOBILE NAV ===== */
 
 @media (max-width:768px){
 
-    .menu-toggle{
-        display:block;
-    }
-
     .nav-links{
         position:absolute;
-        top:80px;
+        top:60px;
         right:0;
         width:100%;
         background:#000;
         flex-direction:column;
         align-items:center;
+        display:none;
         padding:20px 0;
-
-        display:flex;
-        opacity:0;
-        transform:translateY(-10px);
-        pointer-events:none;
-        transition:opacity 0.25s ease, transform 0.25s ease;
     }
 
     .nav-links.active{
-        opacity:1;
-        transform:translateY(0);
-        pointer-events:auto;
+        display:flex;
     }
+
+    .menu-toggle{
+        display:block;
+    }
+
 }
 
-/* ===== RESPONSIVE LOGO ===== */
-
-@media (max-width:900px){
-    .nav-logo img{
-        height:48px;
-    }
-}
-
-@media (max-width:600px){
-    .nav-logo img{
-        height:40px;
-    }
-}
-
-/* ===== PAGE ===== */
+/* ===== PAGE LAYOUT ===== */
 
 .page{
     padding:100px 20px 60px;
@@ -226,7 +181,7 @@ h1{
     margin-bottom:40px;
 }
 
-/* ===== CONTENT ===== */
+/* ===== STEP BLOCKS ===== */
 
 .step{
     margin-bottom:40px;
@@ -242,7 +197,7 @@ h1{
     opacity:0.8;
 }
 
-/* ===== HOME ===== */
+/* ===== HOME SECTIONS ===== */
 
 .home-sections{
     margin-top:100vh;
@@ -257,6 +212,7 @@ h1{
 
 .section h2{
     font-size:26px;
+    margin-bottom:20px;
 }
 
 .section p{
@@ -264,32 +220,66 @@ h1{
     opacity:0.8;
 }
 
-/* ===== MOBILE TEXT ===== */
+/* ===== MOBILE TEXT ADJUSTMENTS ===== */
 
 @media (max-width:700px){
 
-    h1{ font-size:24px; }
-    .product{ font-size:18px; }
-    .launch{ font-size:17px; }
-    .logo{ width:80vw; }
+    h1{
+        font-size:24px;
+    }
+
+    .product{
+        font-size:18px;
+    }
+
+    .launch{
+        font-size:17px;
+    }
+
+    .logo{
+        width:80vw;
+    }
 
 }
 
-/* ===== ABOUT PAGE ===== */
+/* ===== ABOUT PAGE ONLY ===== */
 
-.about-page .page-container{
-    text-align:left;
+.about-page .page-container {
+  text-align: left;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.about-page .page-container p{
-    font-size:19px;
-    line-height:1.7;
+.about-page .page-container p {
+  font-size: 19px;
+  line-height: 1.7;
 }
 
-.about-page .page-container h1{
-    font-size:42px;
+.about-page .page-container h1 {
+  font-size: 42px;
 }
 
-.about-page .page-container h2{
-    font-size:28px;
+.about-page .page-container h2 {
+  font-size: 28px;
+}
+/* ===== GLOBAL NAV LOGO (ALL PAGES EXCEPT SPLASH) ===== */
+
+.nav-logo img {
+  height: 56px;
+  width: auto;
+  display: block;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .nav-logo img {
+    height: 48px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .nav-logo img {
+    height: 40px;
+  }
 }
