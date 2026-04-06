@@ -12,7 +12,27 @@
 </head>
 <body>
 
-  <!-- LANDING (loads immediately, always visible) -->
+  <!-- NAV -->
+  <header class="nav">
+    <div class="nav-container">
+
+      <div class="nav-logo"></div>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="about.html">About</a>
+        <a href="how-it-works.html">How It Works</a>
+        <a href="international.html">International</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="download.html">Download</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    </div>
+  </header>
+
+  <!-- LANDING (UNCHANGED) -->
   <main id="landing" class="show">
     <img src="assets/growmore_logo.png" class="logo" alt="GrowMore Soil & Pasture Tuning">
     
@@ -20,13 +40,40 @@
     <p class="launch">Mobile App launching soon</p>
   </main>
 
-  <!-- SPLASH OVERLAY (plays over landing, then disappears) -->
+  <!-- SPLASH (UNCHANGED) -->
   <div id="splash" aria-hidden="true">
     <video id="splashVideo" autoplay muted playsinline preload="auto">
       <source src="assets/splash.mp4" type="video/mp4">
     </video>
   </div>
 
+  <!-- NEW CONTENT -->
+  <section class="home-sections">
+
+    <div class="section">
+      <h2>Faster decisions. Full market visibility.</h2>
+      <p>
+        Instantly turn soil tests into a complete fertiliser plan, compare supplier pricing, 
+        and place orders — all in one place.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>How GrowMore Works</h2>
+      <p>Scan → Plan → Compare → Order → Job done</p>
+    </div>
+
+    <div class="section">
+      <h2>Built for real farm systems</h2>
+      <p>
+        Designed for dairy and drystock operations, integrating soil tests, farm context, 
+        and supplier data into one streamlined workflow.
+      </p>
+    </div>
+
+  </section>
+
+  <!-- JS -->
   <script>
     const splash = document.getElementById("splash");
     const video = document.getElementById("splashVideo");
@@ -34,26 +81,25 @@
     let dismissed = false;
 
     function dismissSplash() {
-    if (dismissed) return;
-    dismissed = true;
+      if (dismissed) return;
+      dismissed = true;
 
-    splash.classList.add("fade");
+      splash.classList.add("fade");
 
-    setTimeout(() => {
+      setTimeout(() => {
         splash.remove();
-    }, 700);
+      }, 700);
     }
 
-    // dismiss when video finishes
     video.addEventListener("ended", dismissSplash);
-
-    // if video errors
     video.addEventListener("error", dismissSplash);
-
-    // fallback if video somehow never finishes
     setTimeout(dismissSplash, 8000);
-    
-    
+
+    // MOBILE MENU (UPDATED FOR NEW CSS)
+    function toggleMenu() {
+      const menu = document.getElementById("navLinks");
+      menu.classList.toggle("active");
+    }
   </script>
 
 </body>
