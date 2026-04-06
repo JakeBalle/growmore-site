@@ -133,7 +133,6 @@ h1{
 
 /* ===== MOBILE MENU ===== */
 
-/* ===== MOBILE MENU ===== */
 
 .menu-toggle{
     display:none;
@@ -165,6 +164,15 @@ h1{
         display:block;
     }
 
+}
+
+.nav-links{
+    z-index:1001;
+}
+
+.menu-toggle{
+    z-index:1002;
+    position:relative;
 }
 
 /* ===== PAGE LAYOUT ===== */
