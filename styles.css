@@ -186,28 +186,6 @@ h1{
     margin:0 auto;
 }
 
-.page-intro{
-    font-size:16px;
-    opacity:0.8;
-    margin-bottom:40px;
-}
-
-/* ===== STEP BLOCKS ===== */
-
-.step{
-    margin-bottom:40px;
-}
-
-.step h2{
-    font-size:22px;
-    margin-bottom:10px;
-}
-
-.step p{
-    font-size:15px;
-    opacity:0.8;
-}
-
 /* ===== HOME SECTIONS ===== */
 
 .home-sections{
@@ -293,4 +271,96 @@ h1{
   .nav-logo img {
     height: 40px;
   }
+}
+
+.page-container h1 {
+    margin-top: 40px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.page-intro {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 50px auto;
+    font-size: 18px;
+    opacity: 0.85;
+}
+
+.process-step {
+    margin-bottom: 60px;
+    text-align: left;
+}
+
+.process-step h2 {
+    margin-bottom: 6px;
+    font-size: 22px;
+}
+
+.step-intro {
+    margin-bottom: 16px;
+    opacity: 0.8;
+}
+
+/* ===== HOW IT WORKS FINAL TUNING ===== */
+
+.page{
+    padding:80px 20px 60px;
+}
+
+.page-container h1 {
+    margin-top: 40px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.page-intro {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+/* step layout */
+
+.process-step {
+    margin-bottom: 60px;
+    text-align: left;
+}
+
+.process-step h2 {
+    margin-bottom: 6px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.step-intro {
+    margin-bottom: 16px;
+    opacity: 0.9;
+}
+
+/* images */
+
+.process-image {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    display: block;
+}
+
+/* HERO STEP (supplier comparison) */
+
+.process-step:nth-of-type(6) {
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.process-step:nth-of-type(6) h2 {
+    font-size: 26px;
+}
+
+.process-step:nth-of-type(6) .step-intro {
+    font-size: 16px;
+    font-weight: 500;
 }
