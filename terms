@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Use | GrowMore</title>
+    <script type="text/javascript" nonce="1ec95e67568d4fd8857dce1fc76" src="//local.adguard.org?ts=1779668480972&amp;type=content-script&amp;dmn=chatgpt.com&amp;css=1&amp;js=1&amp;gcss=0&amp;rel=1&amp;rji=1&amp;stealth=1&amp;uag="></script>
+<script type="text/javascript" nonce="1ec95e67568d4fd8857dce1fc76" src="//local.adguard.org?ts=1779668480972&amp;name=AdGuard%20Extra&amp;type=user-script"></script><link rel="stylesheet" href="styles.css">
+    <script defer src="main.js"></script>
+</head>
+<body class="about-page">
+
+<header class="nav">
+    <div class="nav-container">
+        <div class="nav-logo">
+            <a href="index.html">
+                <img src="assets/growmore_logo.png" alt="GrowMore" class="logo-img">
+            </a>
+        </div>
+        <nav class="nav-links" id="navLinks">
+            <a href="about.html">About</a>
+            <a href="how-it-works.html">How It Works</a>
+            <a href="international.html">International</a>
+            <a href="testimonials.html">Testimonials</a>
+            <a href="download.html">Download</a>
+            <a href="faq.html">FAQ</a>
+            <a href="privacy.html">Privacy</a>
+            <a href="terms.html">Terms</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    </div>
+</header>
+
+<section class="page">
+    <div class="page-container">
+        <h1>GrowMore Virtual Agronomist</h1>
+        <h2>Terms of Use</h2>
+        <p><strong>Legal Entity:</strong> GrowMore SPT Limited <strong>Last Updated:</strong> 24 May 2026</p>
+        <h1>1. Acceptance of Terms</h1>
+        <p>By downloading, accessing, or using GrowMore Virtual Agronomist, you agree to these Terms of Use.</p>
+        <h1>2. Business Use</h1>
+        <p>The App is intended primarily for agricultural and commercial business use.</p>
+        <p>Where permitted by law, the parties agree that the Consumer Guarantees Act 1993 does not apply to services supplied for business purposes.</p>
+        <h1>3. Nature of the Service</h1>
+        <p>GrowMore Virtual Agronomist is a software platform providing:</p>
+        <ul>
+            <li>Nutrient planning tools</li>
+            <li>Fertiliser recommendation generation</li>
+            <li>Supplier comparison tools</li>
+            <li>Whole-farm planning workflows</li>
+            <li>Ordering facilitation tools</li>
+        </ul>
+        <p>The App is a decision-support platform only.</p>
+        <h1>4. No Professional Advice</h1>
+        <p>The App does not provide:</p>
+        <ul>
+            <li>Certified agronomic advice</li>
+            <li>Financial advice</li>
+            <li>Environmental compliance advice</li>
+            <li>Veterinary advice</li>
+            <li>Legal advice</li>
+        </ul>
+        <p>Users must independently verify all recommendations.</p>
+        <h1>5. User Responsibilities</h1>
+        <p>Users are solely responsible for:</p>
+        <ul>
+            <li>Accuracy of entered data</li>
+            <li>Reviewing recommendations</li>
+            <li>Confirming application rates</li>
+            <li>Compliance with regulations</li>
+            <li>Safe handling and spreading of fertiliser</li>
+        </ul>
+        <h1>6. Orders &amp; Transactions</h1>
+        <p>GrowMore acts solely as a technology intermediary and workflow facilitation platform.</p>
+        <p>GrowMore is not the manufacturer, distributor, transporter, reseller, or physical supplier of fertiliser products listed within the App unless expressly stated otherwise.</p>
+        <p>The App enables users to generate nutrient plans, request supplier quotations, and submit fertiliser order requests to participating suppliers.</p>
+        <p>All fertiliser sales transactions occur directly between the customer and the relevant supplier.</p>
+        <p>GrowMore does not process customer payments for fertiliser products unless expressly stated otherwise.</p>
+        <p>Responsibility for:</p>
+        <ul>
+            <li>Pricing</li>
+            <li>Product availability</li>
+            <li>Freight</li>
+            <li>Storage</li>
+            <li>Blending</li>
+            <li>Transport</li>
+            <li>Fulfilment</li>
+            <li>Product stewardship</li>
+            <li>Spreading</li>
+            <li>Contractor services</li>
+        </ul>
+        <p>remains solely with the relevant supplier, contractor, or customer.</p>
+        <p>Final commercial terms remain solely between the customer and the supplier.</p>
+        <p>GrowMore may receive referral fees, commissions, service fees, or other commercial compensation from participating suppliers.</p>
+        <h1>7. Platform Abuse</h1>
+        <p>Users must not:</p>
+        <ul>
+            <li>Submit fake or misleading orders</li>
+            <li>Impersonate farms, businesses, or individuals</li>
+            <li>Abuse supplier quotation systems</li>
+            <li>Generate non-genuine pricing requests</li>
+            <li>Attempt to disrupt platform operations</li>
+            <li>Use automated systems or bots without written permission</li>
+        </ul>
+        <p>GrowMore reserves the right to suspend, restrict, or terminate accounts engaged in abusive, misleading, fraudulent, or non-genuine activity.</p>
+        <h1>8. Supplier Participation</h1>
+        <p>Supplier participation within the platform may change without notice.</p>
+        <p>GrowMore does not guarantee:</p>
+        <ul>
+            <li>Continued supplier participation</li>
+            <li>Supplier response times</li>
+            <li>Supplier acceptance of orders</li>
+            <li>Geographic availability</li>
+            <li>Product availability</li>
+            <li>Ongoing access to specific product ranges</li>
+        </ul>
+        <h1>9. No Agency Relationship</h1>
+        <p>Unless expressly stated otherwise, GrowMore does not act as an agent, reseller, fiduciary, broker, or procurement representative for either customers or suppliers.</p>
+        <p>GrowMore provides software tools and workflow facilitation services only.</p>
+        <h1>10. Environmental Compliance</h1>
+        <p>Users remain solely responsible for ensuring compliance with:</p>
+        <ul>
+            <li>Regional council nutrient rules</li>
+            <li>Farm Environment Plans</li>
+            <li>Freshwater regulations</li>
+            <li>Nutrient loss limits</li>
+            <li>Hazardous substances regulations</li>
+            <li>Storage and transport regulations</li>
+        </ul>
+        <p>GrowMore does not guarantee regulatory compliance outcomes.</p>
+        <h1>11. Authentication &amp; Notifications</h1>
+        <p>GrowMore may provide account authentication using:</p>
+        <ul>
+            <li>Email and password authentication</li>
+            <li>Sign in with Apple</li>
+            <li>Google Sign-In</li>
+        </ul>
+        <p>GrowMore may also offer optional push notifications relating to supplier responses, order updates, and operational communications.</p>
+        <p>Users may control notification permissions through their device settings.</p>
+        <h1>12. Intellectual Property</h1>
+        <p>All software, branding, databases, calculations, workflows, and content remain the property of GrowMore SPT Limited unless otherwise stated.</p>
+        <h1>13. Availability</h1>
+        <p>The App is provided on an “as available” basis.</p>
+        <p>GrowMore does not guarantee uninterrupted availability or uninterrupted supplier integrations.</p>
+        <p>Supplier integrations, product catalogues, pricing feeds, and ordering workflows may become unavailable, delayed, interrupted, or inaccurate from time to time.</p>
+        <h1>14. Account Deletion Requests &amp; Data Retention</h1>
+        <p>Users may request deletion of their account through the App or by contacting GrowMore SPT Limited.</p>
+        <p>Deletion requests are reviewed and processed manually by GrowMore SPT Limited.</p>
+        <p>Deletion of an account does not necessarily require immediate deletion of all associated records.</p>
+        <p>GrowMore may retain certain information for legitimate business purposes including:</p>
+        <ul>
+            <li>Supplier transaction history</li>
+            <li>Order records</li>
+            <li>Audit records</li>
+            <li>Fraud prevention</li>
+            <li>Dispute resolution</li>
+            <li>Regulatory compliance</li>
+            <li>Accounting obligations</li>
+            <li>Cybersecurity monitoring</li>
+            <li>System logs</li>
+            <li>Anonymised analytics</li>
+        </ul>
+        <p>Where practical, personal identifiers may be removed or anonymised.</p>
+        <p>GrowMore reserves the right to refuse or delay deletion requests where necessary for:</p>
+        <ul>
+            <li>Fraud investigations</li>
+            <li>Supplier disputes</li>
+            <li>Regulatory obligations</li>
+            <li>Legal compliance</li>
+            <li>Security investigations</li>
+            <li>Outstanding commercial matters</li>
+        </ul>
+        <h1>15. Limitation of Liability</h1>
+        <p>To the maximum extent permitted by law, GrowMore SPT Limited excludes liability for:</p>
+        <ul>
+            <li>Production losses</li>
+            <li>Crop losses</li>
+            <li>Livestock losses</li>
+            <li>Environmental losses</li>
+            <li>Business interruption</li>
+            <li>Reliance on App outputs</li>
+        </ul>
+        <p>GrowMore shall not be liable for supplier conduct, supplier pricing, supplier fulfilment failures, freight disputes, product defects, contractor performance, or disputes arising between customers and suppliers.</p>
+        <p>Where liability cannot legally be excluded, GrowMore’s aggregate liability shall not exceed the greater of:</p>
+        <ul>
+            <li>the amount paid by the user during the preceding 12 months; or</li>
+            <li>NZD $100.</li>
+        </ul>
+        <h1>16. Indemnity</h1>
+        <p>Users agree to indemnify GrowMore SPT Limited against claims arising from:</p>
+        <ul>
+            <li>Use of the App</li>
+            <li>Reliance on recommendations</li>
+            <li>Regulatory breaches</li>
+            <li>Environmental incidents</li>
+            <li>Incorrect data entry</li>
+        </ul>
+        <h1>17. Termination</h1>
+        <p>GrowMore may suspend or terminate access where:</p>
+        <ul>
+            <li>These Terms are breached</li>
+            <li>Fraudulent activity is suspected</li>
+            <li>Platform misuse occurs</li>
+        </ul>
+        <h1>18. Governing Law</h1>
+        <p>These Terms are governed by the laws of New Zealand.</p>
+        <h1>19. Contact</h1>
+        <p>GrowMore SPT Limited</p>
+        <p>Email: legal@growmorespt.co.nz Website: growmorespt.co.nz</p>
+    </div>
+</section>
+
+</body>
+</html>
