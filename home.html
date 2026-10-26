@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GrowMore Virtual Agronomist — Independent Fertiliser Advice for NZ Farmers</title>
+  <meta name="description" content="Enter your soil test. Compare every major NZ fertiliser supplier. Get the least-cost blend that meets your nutrient targets — science-based, supplier-neutral, free to use.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="home.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <a href="index.html">
+          <img src="assets/growmore_logo.png" alt="GrowMore" class="logo-img">
+        </a>
+      </div>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">About</a>
+        <a href="how-it-works.html">How It Works</a>
+        <a href="international.html">International</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="download.html">Download</a>
+        <a href="faq.html">FAQ</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    </div>
+  </header>
+
+  <!-- SPLASH VIDEO -->
+  <div id="splash" aria-hidden="true">
+    <video id="splashVideo" autoplay muted playsinline preload="auto">
+      <source src="assets/splash.mp4" type="video/mp4">
+    </video>
+    <span class="splash-skip">Tap to skip</span>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <div class="hero-pill">Science-based. Supplier-neutral. Free to use.</div>
+        <h1>Better fertiliser decisions.<br>From your phone.</h1>
+        <p class="hero-sub">Enter your soil test results and get a science-based nutrient plan — with real pricing from every major NZ supplier ranked by on-ground cost. More productive pastures start with better information.</p>
+        <div class="store-badges">
+          <a href="https://apps.apple.com/nz/app/growmore-virtual-agronomist/id6773807170" target="_blank" rel="noopener">
+            <img src="assets/Download_on_the_App_Store_Badge_US-UK_RGB_wht_092917.svg" alt="Download on the App Store">
+          </a>
+          <a href="https://play.google.com/store/apps/details?id=nz.co.growmorespt.growmore&pcampaignid=web_share" target="_blank" rel="noopener">
+            <img src="assets/GetItOnGooglePlay_Badge_Web_color_English.svg" alt="Get it on Google Play">
+          </a>
+        </div>
+      </div>
+      <div class="hero-phone">
+        <img src="assets/app-soil-test.png" alt="GrowMore soil test results — radar chart and nutrient levels" class="phone-screen">
+      </div>
+    </div>
+  </section>
+
+  <!-- OPPORTUNITY -->
+  <section class="problem-section">
+    <div class="content-container">
+      <h2>New Zealand's pastoral productivity potential is enormous.</h2>
+      <p>Top farms consistently achieve 1,100–1,700 kg MS/ha. The gap between average and top performers often comes down to one thing: how well fertiliser decisions align with what the soil actually needs. GrowMore puts that calculation in every farmer's hands — free, transparent, and grounded in science.</p>
+      <div class="stat-row">
+        <div class="stat">
+          <span class="stat-num">12–20</span>
+          <span class="stat-label">tonnes DM/ha achievable on well-managed pasture</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">4+</span>
+          <span class="stat-label">major NZ suppliers compared in one workflow</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">Free</span>
+          <span class="stat-label">to download and use — no subscription, no lock-in</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how-section">
+    <div class="content-container">
+      <h2>How it works</h2>
+      <p class="section-sub">From soil test to fertiliser plan in three steps.</p>
+
+      <div class="steps-grid">
+
+        <div class="step-card">
+          <div class="step-num">01</div>
+          <img src="assets/app-farm-setup.png" alt="Set up your farm — name, region, farm type" class="step-img">
+          <h3>Set up your farm</h3>
+          <p>Enter your farm name, region, and type — Dairy or Drystock. Add your blocks with their size and soil type. Takes two minutes the first time, saved forever after.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-num">02</div>
+          <img src="assets/app-soil-test.png" alt="Enter soil test results — radar chart and nutrient target bars" class="step-img">
+          <h3>Enter your soil test</h3>
+          <p>Input your results from Eurofins, Hill Labs, or PAL. The app maps every nutrient against target range and generates a written summary of what your soil needs this season.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-num">03</div>
+          <img src="assets/step10.png" alt="Compare suppliers — ranked by on-ground cost" class="step-img">
+          <h3>Compare and choose</h3>
+          <p>Custom blend options from Ballance, Ravensdown, Dickie Direct, Marnco and more — ranked by on-ground cost. The best value option is highlighted. Order through the app or take the plan to your supplier.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW WE STAY INDEPENDENT -->
+  <section class="independent-section">
+    <div class="content-container independent-inner">
+      <div class="independent-text">
+        <h2>How supplier-neutral advice actually works</h2>
+        <p>GrowMore earns a commission from participating suppliers when orders are placed through the app — at the same flat rate from every one of them. That equal treatment is what keeps recommendations honest: we have no financial reason to favour any supplier over another.</p>
+        <p>Suppliers who aren't yet on the platform still appear in pricing results — you'll just need to place those orders manually. Over time, as more suppliers join, the whole market becomes more transparent and more competitive for everyone.</p>
+        <p>The recommendation you receive is driven entirely by what your soil test says your pasture needs, and which available product combination delivers that at the lowest on-ground cost.</p>
+      </div>
+      <div class="independent-visual">
+        <div class="independent-card">
+          <div class="ind-icon">⚖️</div>
+          <h3>Equal commissions</h3>
+          <p>Every participating supplier pays the same rate. No premium placements, no preferred partners.</p>
+        </div>
+        <div class="independent-card">
+          <div class="ind-icon">🧪</div>
+          <h3>Science drives the recommendation</h3>
+          <p>Nutrient requirements are calculated from your soil test and farm parameters — not from what's in stock or on promotion.</p>
+        </div>
+        <div class="independent-card">
+          <div class="ind-icon">📊</div>
+          <h3>Full price visibility</h3>
+          <p>Ex-store price, cartage, blending and spreading shown separately. You see exactly what you're paying for.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features-section">
+    <div class="content-container">
+      <h2>Everything you need to make a better call</h2>
+      <div class="features-grid">
+        <div class="feature">
+          <div class="feature-icon">🗺️</div>
+          <h3>Multi-block farm management</h3>
+          <p>Manage all your blocks in one place. Different soil types, hectares, and soil tests handled separately — or combined with weighted averages for large blocks.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🎯</div>
+          <h3>Nutrient targets, not guesses</h3>
+          <p>Calculates what your soil needs — N, P, K, S, Mg, Ca and trace elements — based on your actual test results, soil type, farm type, stocking rate and rainfall.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">⚙️</div>
+          <h3>Fine-tune your application</h3>
+          <p>Adjust nitrogen rates, capital vs maintenance split, regenerative vs conventional inputs, and inhibitor preferences. Blends re-calculate instantly.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">📋</div>
+          <h3>Application report</h3>
+          <p>Generate a complete fertiliser plan — product list, rates, total cost — ready to send to your contractor or hand to your supplier.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🌱</div>
+          <h3>Conventional and regenerative</h3>
+          <p>Toggle between conventional, regenerative, or certified organic product preferences. Compare what each approach costs for your specific situation.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">📱</div>
+          <h3>iPhone and Android</h3>
+          <p>Built for the paddock. Works offline once your farm is set up. Available free on the App Store and Google Play.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SHOWCASE -->
+  <section class="showcase-section">
+    <div class="showcase-inner">
+      <div class="showcase-text">
+        <h2>The science explained in plain language</h2>
+        <p>After running the numbers, GrowMore generates a written summary of what your soil test means — which nutrients are deficient, which are at risk, and what that implies for your fertiliser programme this season.</p>
+        <p>No black box. No "trust us". A transparent calculation you can interrogate, compare across suppliers, and share with whoever needs to see it.</p>
+      </div>
+      <div class="showcase-phone">
+        <img src="assets/app-slan-report.png" alt="GrowMore soil test report — radar chart and written summary" class="phone-screen">
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="content-container cta-inner">
+      <h2>See what your soil actually needs.</h2>
+      <p>GrowMore is free to download. Available now on iPhone and Android.</p>
+      <div class="store-badges">
+        <a href="https://apps.apple.com/nz/app/growmore-virtual-agronomist/id6773807170" target="_blank" rel="noopener">
+          <img src="assets/Download_on_the_App_Store_Badge_US-UK_RGB_wht_092917.svg" alt="Download on the App Store">
+        </a>
+        <a href="https://play.google.com/store/apps/details?id=nz.co.growmorespt.growmore&pcampaignid=web_share" target="_blank" rel="noopener">
+          <img src="assets/GetItOnGooglePlay_Badge_Web_color_English.svg" alt="Get it on Google Play">
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="content-container footer-inner">
+      <img src="assets/growmore_logo.png" alt="GrowMore" class="footer-logo">
+      <p class="footer-text">GrowMore Soil & Pasture Tuning — Science-based fertiliser advice for NZ farmers.</p>
+      <div class="footer-links">
+        <a href="index.html">About</a>
+        <a href="how-it-works.html">How It Works</a>
+        <a href="faq.html">FAQ</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <p class="footer-copy">© 2025 GrowMore Soil & Pasture Tuning Ltd. Built in the Waikato, New Zealand.</p>
+    </div>
+  </footer>
+
+  <script>
+    const splash = document.getElementById("splash");
+    const video = document.getElementById("splashVideo");
+    let dismissed = false;
+
+    function dismissSplash() {
+      if (dismissed) return;
+      dismissed = true;
+      splash.classList.add("fade");
+      setTimeout(() => { splash.remove(); }, 700);
+    }
+
+    video.addEventListener("ended", dismissSplash);
+    video.addEventListener("error", dismissSplash);
+    splash.addEventListener("click", dismissSplash);
+    setTimeout(dismissSplash, 8000);
+
+    function toggleMenu() {
+      const menu = document.getElementById("navLinks");
+      menu.classList.toggle("active");
+    }
+  </script>
+
+</body>
+</html>

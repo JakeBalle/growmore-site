@@ -1,0 +1,72 @@
+/* =============================================
+   ABOUT / LANDING PAGE
+   ============================================= */
+:root{
+  --green:#4fc97e; --blue:#5bb8f5; --dark:#0e0e0e;
+  --card:#1a1a1a; --border:rgba(255,255,255,.08);
+  --muted:rgba(255,255,255,.62);
+}
+
+.ab-wrap{max-width:1080px;margin:0 auto;padding-inline:20px;padding-block:0 96px;text-align:left}
+
+/* ---- opening ---- */
+.ab-hero{padding-block:56px 8px}
+.ab-pill{display:inline-block;background:rgba(79,201,126,.12);color:var(--green);
+  border:1px solid rgba(79,201,126,.28);border-radius:100px;padding:5px 15px;
+  font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:20px}
+.ab-hero h1{font-size:clamp(30px,5vw,52px);line-height:1.1;margin:0 0 20px;text-wrap:balance}
+.ab-lede{font-size:clamp(17px,2vw,21px);line-height:1.6;max-width:62ch;margin:0 0 16px}
+.ab-lede.dim{color:var(--muted)}
+.ab-badges{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
+.ab-badges img{height:48px;width:auto}
+
+/* ---- alternating image + text ---- */
+.ab-band{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,5vw,64px);
+  align-items:center;margin-block:clamp(48px,7vw,88px)}
+.ab-band:nth-of-type(even) .ab-band-img{order:2}
+.ab-band-img{min-width:0}
+.ab-band-img img{display:block;width:100%;max-width:100%;border-radius:14px;
+  border:1px solid var(--border);background:#000}
+.ab-band-img.phone img{max-width:300px;margin:0 auto;border-radius:22px}
+.ab-band-img.portrait img{max-width:400px;margin:0 auto}
+.ab-band-img video.ab-vid{display:block;width:100%;max-width:100%;border-radius:14px;
+  border:1px solid var(--border);background:#000}
+@media (prefers-reduced-motion:reduce){.ab-band-img video.ab-vid{display:none}
+  .ab-band-img video.ab-vid + img{display:block}}
+.ab-band-text{min-width:0}
+.ab-band-text h2{font-size:clamp(22px,3vw,32px);line-height:1.2;margin:0 0 14px;text-wrap:balance}
+.ab-band-text p{font-size:16px;line-height:1.7;color:var(--muted);margin:0 0 14px;max-width:52ch}
+.ab-band-text p strong{color:#fff;font-weight:600}
+.ab-kicker{display:block;font-size:12px;font-weight:700;letter-spacing:1.4px;
+  text-transform:uppercase;color:var(--blue);margin-bottom:10px}
+
+/* ---- detail accordion ---- */
+.ab-detail{margin-top:clamp(56px,8vw,96px);border-top:1px solid var(--border);padding-top:48px}
+.ab-detail > h2{font-size:clamp(22px,3vw,30px);margin:0 0 8px}
+.ab-detail > p.ab-detail-intro{color:var(--muted);max-width:60ch;margin:0 0 28px;line-height:1.7}
+details.ab-acc{border:1px solid var(--border);border-radius:10px;background:var(--card);
+  margin-bottom:10px;overflow:hidden}
+details.ab-acc > summary{list-style:none;cursor:pointer;padding:16px 20px;
+  font-size:17px;font-weight:600;display:flex;align-items:center;gap:14px}
+details.ab-acc > summary::-webkit-details-marker{display:none}
+details.ab-acc > summary::after{content:"+";margin-left:auto;font-size:22px;font-weight:400;
+  color:var(--green);line-height:1;flex:0 0 auto}
+details.ab-acc[open] > summary::after{content:"\2212"}
+details.ab-acc > summary:hover{background:rgba(255,255,255,.03)}
+details.ab-acc > summary:focus-visible{outline:2px solid var(--blue);outline-offset:-2px}
+.ab-acc-body{padding:0 20px 20px;border-top:1px solid var(--border)}
+.ab-acc-body p{font-size:15.5px;line-height:1.75;color:var(--muted);margin:16px 0 0;max-width:68ch}
+.ab-acc-body p:first-child{margin-top:16px}
+
+/* ---- closing ---- */
+.ab-cta{margin-top:clamp(56px,8vw,88px);border:1px solid var(--border);border-radius:14px;
+  background:var(--card);padding:clamp(28px,5vw,48px);text-align:center}
+.ab-cta h2{font-size:clamp(22px,3vw,30px);margin:0 0 10px;text-wrap:balance}
+.ab-cta p{color:var(--muted);margin:0 auto 24px;max-width:48ch;line-height:1.65}
+.ab-cta .ab-badges{justify-content:center}
+
+@media (max-width:760px){
+  .ab-band{grid-template-columns:1fr;gap:20px}
+  .ab-band:nth-of-type(even) .ab-band-img{order:0}
+  .ab-badges img{height:42px}
+}

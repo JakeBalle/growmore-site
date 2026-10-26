@@ -1,0 +1,520 @@
+/* =============================================
+   GROWMORE HOME PAGE STYLES
+   Supplements styles.css (don't edit that file
+   for home-specific layout)
+   ============================================= */
+
+:root {
+  --green: #4fc97e;
+  --blue:  #5bb8f5;
+  --dark:  #0e0e0e;
+  --card:  #1a1a1a;
+  --border: rgba(255,255,255,0.08);
+}
+
+/* ===== HERO ===== */
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: var(--dark);
+  padding: 120px 30px 80px;
+  box-sizing: border-box;
+}
+
+.hero-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.hero-text {
+  flex: 1;
+  text-align: left;
+}
+
+.hero-pill {
+  display: inline-block;
+  background: rgba(79, 201, 126, 0.15);
+  color: var(--green);
+  border: 1px solid rgba(79, 201, 126, 0.3);
+  border-radius: 100px;
+  padding: 6px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.hero h1 {
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 800;
+  line-height: 1.15;
+  margin: 0 0 20px;
+  text-align: left;
+}
+
+.hero-sub {
+  font-size: 18px;
+  line-height: 1.7;
+  opacity: 0.8;
+  margin: 0 0 36px;
+  max-width: 520px;
+}
+
+.hero-phone {
+  flex: 0 0 280px;
+  display: flex;
+  justify-content: center;
+}
+
+.phone-screen {
+  width: 260px;
+  border-radius: 28px;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.06);
+  display: block;
+}
+
+/* ===== STORE BADGES (shared) ===== */
+
+.store-badges {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.store-badges img {
+  height: 48px;
+  width: auto;
+  display: block;
+}
+
+/* ===== SHARED CONTENT CONTAINER ===== */
+
+.content-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+/* ===== PROBLEM SECTION ===== */
+
+.problem-section {
+  background: #111;
+  padding: 100px 30px;
+  text-align: center;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.problem-section h2 {
+  font-size: clamp(24px, 3vw, 36px);
+  font-weight: 800;
+  margin: 0 0 20px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.problem-section p {
+  font-size: 17px;
+  line-height: 1.8;
+  opacity: 0.75;
+  max-width: 640px;
+  margin: 0 auto 60px;
+}
+
+.stat-row {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.stat-num {
+  font-size: 42px;
+  font-weight: 800;
+  color: var(--green);
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 14px;
+  opacity: 0.6;
+  text-align: center;
+  max-width: 160px;
+}
+
+/* ===== HOW IT WORKS ===== */
+
+.how-section {
+  padding: 100px 30px;
+  background: var(--dark);
+  text-align: center;
+}
+
+.how-section h2 {
+  font-size: clamp(26px, 3vw, 38px);
+  font-weight: 800;
+  margin: 0 0 12px;
+}
+
+.section-sub {
+  font-size: 17px;
+  opacity: 0.65;
+  margin: 0 0 60px;
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  text-align: left;
+}
+
+.step-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.step-num {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--blue);
+  letter-spacing: 2px;
+}
+
+.step-img {
+  width: 100%;
+  border-radius: 14px;
+  display: block;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+}
+
+.step-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.step-card p {
+  font-size: 14px;
+  line-height: 1.7;
+  opacity: 0.7;
+  margin: 0;
+}
+
+/* ===== FEATURES ===== */
+
+.features-section {
+  padding: 100px 30px;
+  background: #111;
+  text-align: center;
+  border-top: 1px solid var(--border);
+}
+
+.features-section h2 {
+  font-size: clamp(24px, 3vw, 36px);
+  font-weight: 800;
+  margin: 0 0 56px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  text-align: left;
+}
+
+.feature {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 28px;
+}
+
+.feature-icon {
+  font-size: 28px;
+  margin-bottom: 14px;
+}
+
+.feature h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 10px;
+}
+
+.feature p {
+  font-size: 14px;
+  line-height: 1.7;
+  opacity: 0.65;
+  margin: 0;
+}
+
+/* ===== SHOWCASE ===== */
+
+.showcase-section {
+  padding: 100px 30px;
+  background: var(--dark);
+  border-top: 1px solid var(--border);
+}
+
+.showcase-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.showcase-text {
+  flex: 1;
+}
+
+.showcase-text h2 {
+  font-size: clamp(24px, 3vw, 36px);
+  font-weight: 800;
+  margin: 0 0 20px;
+  text-align: left;
+}
+
+.showcase-text p {
+  font-size: 16px;
+  line-height: 1.8;
+  opacity: 0.75;
+  margin: 0 0 16px;
+}
+
+.showcase-phone {
+  flex: 0 0 260px;
+  display: flex;
+  justify-content: center;
+}
+
+/* ===== CTA ===== */
+
+.cta-section {
+  padding: 100px 30px;
+  background: #111;
+  text-align: center;
+  border-top: 1px solid var(--border);
+}
+
+.cta-inner h2 {
+  font-size: clamp(26px, 3vw, 40px);
+  font-weight: 800;
+  margin: 0 0 16px;
+}
+
+.cta-inner p {
+  font-size: 17px;
+  opacity: 0.7;
+  margin: 0 0 36px;
+}
+
+.cta-inner .store-badges {
+  justify-content: center;
+}
+
+/* ===== FOOTER ===== */
+
+.site-footer {
+  background: #0a0a0a;
+  padding: 60px 30px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+
+.footer-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-logo {
+  height: 40px;
+  width: auto;
+  opacity: 0.8;
+}
+
+.footer-text {
+  font-size: 14px;
+  opacity: 0.55;
+  margin: 0;
+  max-width: 400px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+  opacity: 0.5;
+  transition: opacity 0.2s;
+}
+
+.footer-links a:hover {
+  opacity: 1;
+}
+
+.footer-copy {
+  font-size: 12px;
+  opacity: 0.3;
+  margin: 0;
+}
+
+/* ===== INDEPENDENT SECTION ===== */
+
+.independent-section {
+  padding: 100px 30px;
+  background: #111;
+  border-top: 1px solid var(--border);
+}
+
+.independent-inner {
+  display: flex;
+  gap: 80px;
+  align-items: flex-start;
+}
+
+.independent-text {
+  flex: 1;
+}
+
+.independent-text h2 {
+  font-size: clamp(24px, 3vw, 36px);
+  font-weight: 800;
+  margin: 0 0 24px;
+}
+
+.independent-text p {
+  font-size: 16px;
+  line-height: 1.8;
+  opacity: 0.75;
+  margin: 0 0 16px;
+}
+
+.independent-visual {
+  flex: 0 0 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.independent-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 24px;
+}
+
+.ind-icon {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.independent-card h3 {
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0 0 8px;
+}
+
+.independent-card p {
+  font-size: 13px;
+  line-height: 1.6;
+  opacity: 0.65;
+  margin: 0;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 900px) {
+  .hero-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text {
+    text-align: center;
+  }
+
+  .hero h1 {
+    text-align: center;
+  }
+
+  .hero-sub {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .store-badges {
+    justify-content: center;
+  }
+
+  .steps-grid,
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .showcase-inner,
+  .independent-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .showcase-inner {
+    flex-direction: column-reverse;
+  }
+
+  .showcase-text h2 {
+    text-align: center;
+  }
+
+  .hero-phone,
+  .showcase-phone {
+    flex: none;
+  }
+
+  .stat-row {
+    gap: 36px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 100px 20px 60px;
+  }
+
+  .phone-screen {
+    width: 220px;
+  }
+
+  .step-card,
+  .feature {
+    padding: 20px;
+  }
+}

@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How It Works | GrowMore</title>
+    <title>How It Works | GrowMore Virtual Agronomist</title>
+    <meta name="description" content="How GrowMore works — from farm setup to soil test to supplier comparison. A science-based fertiliser workflow in your pocket.">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="hiw.css">
     <script defer src="main.js"></script>
 </head>
 <body>
@@ -16,9 +18,8 @@
                 <img src="assets/growmore_logo.png" alt="GrowMore" class="logo-img">
             </a>
         </div>
-
         <nav class="nav-links" id="navLinks">
-            <a href="about.html">About</a>
+            <a href="index.html">About</a>
             <a href="how-it-works.html">How It Works</a>
             <a href="international.html">International</a>
             <a href="testimonials.html">Testimonials</a>
@@ -28,108 +29,226 @@
             <a href="terms.html">Terms</a>
             <a href="contact.html">Contact</a>
         </nav>
-
         <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-
     </div>
 </header>
 
 <section class="page">
-
     <div class="page-container">
 
         <h1>How It Works</h1>
         <p class="page-intro">
-            From soil test to fertiliser plan in a structured workflow.
+            GrowMore takes you from soil test to fertiliser plan in a structured three-step workflow. Every calculation is based on your actual soil test data and farm parameters — no guesswork, no sales influence.
         </p>
 
-        <!-- SECTION 1 -->
-        <div class="process-step">
-            <h2>Set up your Farm</h2>
-            <p class="step-intro">Provide the context the app needs to work...</p>
+        <!-- VIDEO -->
+        <div class="hiw-video">
+            <h2>Watch it in action</h2>
+            <p class="hiw-video-intro">Rep too busy? Or just want to check what you're being told? Here's the app doing the job, screen by screen — setting up a farm, loading a soil test, and handling a block that needs more than one.</p>
 
-            <img src="assets/step1.png" class="process-image" alt="">
+            <div class="video-frame">
+                <iframe id="hiwPlayer"
+                        src="https://www.youtube-nocookie.com/embed/ANK3pQo90j4?rel=0"
+                        title="Setting up your farm in the GrowMore Virtual Agronomist"
+                        loading="lazy" allowfullscreen
+                        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+            </div>
+
+            <ul class="video-list">
+                <li>
+                    <a class="video-pick is-active" href="https://youtu.be/ANK3pQo90j4"
+                       data-id="ANK3pQo90j4"
+                       data-title="Setting up your farm in the GrowMore Virtual Agronomist"
+                       target="_blank" rel="noopener">
+                        <span class="video-pick-thumb"><img src="assets/vid-clip1.jpg" alt="" loading="lazy"><span class="video-pick-time">1:43</span></span>
+                        <span class="video-pick-text">
+                            <span class="video-pick-num">1 of 8</span>
+                            <span class="video-pick-title">Setting up your farm and blocks</span>
+                            <span class="video-pick-desc">Farm profile, then every block with its hectares and soil type.</span>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a class="video-pick" href="https://youtu.be/5QdVeh0Ytrs"
+                       data-id="5QdVeh0Ytrs"
+                       data-title="Adding a soil test to the GrowMore Virtual Agronomist"
+                       target="_blank" rel="noopener">
+                        <span class="video-pick-thumb"><img src="assets/vid-clip2.jpg" alt="" loading="lazy"><span class="video-pick-time">3:55</span></span>
+                        <span class="video-pick-text">
+                            <span class="video-pick-num">2 of 8</span>
+                            <span class="video-pick-title">Adding a soil test</span>
+                            <span class="video-pick-desc">Olsen P, sulphur, cations, pH — and how to order a test if you haven't got one.</span>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a class="video-pick" href="https://youtu.be/tofPu8JgJWw"
+                       data-id="tofPu8JgJWw"
+                       data-title="More than one soil test on a block"
+                       target="_blank" rel="noopener">
+                        <span class="video-pick-thumb"><img src="assets/vid-clip3.jpg" alt="" loading="lazy"><span class="video-pick-time">2:25</span></span>
+                        <span class="video-pick-text">
+                            <span class="video-pick-num">3 of 8</span>
+                            <span class="video-pick-title">More than one soil test on a block</span>
+                            <span class="video-pick-desc">On a big block one test is a guess. Tell the app how much ground each one speaks for.</span>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a class="video-pick" href="https://youtu.be/7VeHJBkMn8c"
+                       data-id="7VeHJBkMn8c"
+                       data-title="Costing a fertiliser application across suppliers"
+                       target="_blank" rel="noopener">
+                        <span class="video-pick-thumb"><img src="assets/vid-clip4.jpg" alt="" loading="lazy"><span class="video-pick-time">3:11</span></span>
+                        <span class="video-pick-text">
+                            <span class="video-pick-num">4 of 8</span>
+                            <span class="video-pick-title">Costing a fertiliser application</span>
+                            <span class="video-pick-desc">Every supplier quotes the same job. What it costs ex-store, and what it lands at on the ground.</span>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+
+            <p class="hiw-video-more"><a href="https://www.youtube.com/@growmoreSPT" target="_blank" rel="noopener">More videos on our YouTube channel &rarr;</a></p>
         </div>
 
-        <!-- SECTION 1a -->
-        <div class="process-step">
-            <h2>Create blocks</h2>
-            <p class="step-intro">Select the size and prevailing soil type...</p>
+        <script>
+        (function () {
+            var player = document.getElementById('hiwPlayer');
+            var picks  = document.querySelectorAll('.video-pick');
+            if (!player || !picks.length) return;
+            Array.prototype.forEach.call(picks, function (pick) {
+                pick.addEventListener('click', function (e) {
+                    if (e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return;
+                    e.preventDefault();
+                    player.src = 'https://www.youtube-nocookie.com/embed/' + pick.dataset.id + '?rel=0&autoplay=1';
+                    player.title = pick.dataset.title;
+                    Array.prototype.forEach.call(picks, function (p) { p.classList.remove('is-active'); });
+                    pick.classList.add('is-active');
+                    player.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                });
+            });
+        })();
+        </script>
 
-            <img src="assets/step1a.png" class="process-image" alt="">
+        <!-- PHASE 1 -->
+        <div class="hiw-phase">
+            <div class="phase-label">Phase 1</div>
+            <h2>Set up your farm</h2>
+
+            <div class="hiw-step">
+                <div class="hiw-step-text">
+                    <h3>Create your farm profile</h3>
+                    <p>Start by entering your farm name, region, and type — Dairy or Drystock. The app uses this to select the right nutrient targets and default stocking parameters for your system. Takes about two minutes the first time; once saved it's there every time you open the app.</p>
+                </div>
+                <div class="hiw-step-img">
+                    <img src="assets/app-farm-setup.png" alt="Farm setup screen — name, region, farm type">
+                </div>
+            </div>
+
+            <div class="hiw-step hiw-step-reverse">
+                <div class="hiw-step-text">
+                    <h3>Add your blocks</h3>
+                    <p>A block is any area of your farm you want to manage separately — different paddocks, soil types, or management zones. For each block, enter the name, size in hectares, and soil type (Sedimentary, Pumice, Volcanic Ash, or Peat).</p>
+                    <p>You can run fertiliser applications across multiple blocks of the same soil type, or manage them individually. The app stores all your blocks and their historical soil tests so you build up a picture of how your farm's fertility changes over time.</p>
+                </div>
+                <div class="hiw-step-img">
+                    <img src="assets/step1.png" alt="Block management — farm blocks list">
+                </div>
+            </div>
         </div>
 
-        <!-- SECTION 2 -->
-        <div class="process-step">
-            <h2>Choose which blocks you want to create a fert application for...</h2>
-            <p class="step-intro"></p>
+        <!-- PHASE 2 -->
+        <div class="hiw-phase">
+            <div class="phase-label">Phase 2</div>
+            <h2>Enter your soil test</h2>
 
-            <img src="assets/step2.png" class="process-image" alt="">
+            <div class="hiw-step">
+                <div class="hiw-step-text">
+                    <h3>Load your results</h3>
+                    <p>The app works with results from any accredited NZ lab — Eurofins, Hill Labs, PAL, or others. You can use your most recent test, select multiple tests for weighted averaging across large blocks, or enter results manually. Camera scanning and direct lab import are coming soon.</p>
+                    <p>The app uses 12 inputs: Olsen P, K, Ca, Mg, Na, pH, Sulphate S (SO4-S), Extractable Organic Sulphur (EOS), CEC, Anion Storage Capacity (ASC), and Volume Weight.</p>
+                </div>
+                <div class="hiw-step-img">
+                    <img src="assets/step5.png" alt="Soil test input — cations screen">
+                </div>
+            </div>
+
+            <div class="hiw-step hiw-step-reverse">
+                <div class="hiw-step-text">
+                    <h3>See where you stand</h3>
+                    <p>Once your results are loaded, the app generates a radar chart showing your actual nutrient levels against the ideal range for your soil and farm type. A colour-coded bar for each nutrient shows exactly how far above or below target you are.</p>
+                    <p>A written summary explains what the numbers mean in plain language — which nutrients need building, which are adequate, and what the implications are for this season's programme.</p>
+                    <p>pH is read from the same test. Where your soil sits below target, the app works out an Ag-Lime rate in tonnes per hectare from your pH.</p>
+                </div>
+                <div class="hiw-step-img">
+                    <img src="assets/app-soil-test.png" alt="Soil test results — radar chart and nutrient bars">
+                </div>
+            </div>
         </div>
 
-        <!-- SECTION 3 -->
-        <div class="process-step">
-            <h2>Its good to have options - right?.</h2>
-            <p class="step-intro"></p>
+        <!-- PHASE 3 -->
+        <div class="hiw-phase">
+            <div class="phase-label">Phase 3</div>
+            <h2>Compare and choose</h2>
 
-            <img src="assets/step3.png" class="process-image" alt="">
+            <div class="hiw-step">
+                <div class="hiw-step-text">
+                    <h3>Every option, ranked by cost</h3>
+                    <p>The app calculates the custom blend needed to meet your nutrient targets, then prices it across every participating supplier — Ballance, Ravensdown, Dickie Direct, Marnco and more. Results are ranked by estimated on-ground cost, including cartage, blending and spreading.</p>
+                    <p>The lowest on-ground cost option is highlighted as the recommended choice. You can toggle between on-ground and ex-store pricing depending on what's relevant to you.</p>
+                    <p>Lime sits on its own tab beside the supply options, showing the rate your pH calls for. In this release it's a recommendation only — it isn't added to the order with the blend.</p>
+                </div>
+                <div class="hiw-step-img">
+                    <img src="assets/step10.png" alt="Supply options — suppliers ranked by cost">
+                </div>
+            </div>
+
+            <div class="hiw-step hiw-step-reverse">
+                <div class="hiw-step-text">
+                    <h3>Fine-tune your application</h3>
+                    <p>Before committing, adjust your application parameters using the Fine Tune controls:</p>
+                    <ul class="hiw-list">
+                        <li>Nitrogen rate — include or exclude N, choose inhibitor options</li>
+                        <li>Capital vs maintenance split — how aggressively to build soil fertility</li>
+                        <li>Trace elements — based on your herbage test results</li>
+                        <li>Product preference — conventional, regenerative, or certified organic</li>
+                    </ul>
+                    <p>The product preference switch is the one worth playing with. It changes which products the app is allowed to use, so you can price a conventional programme, a regenerative one and a certified organic one against the same soil test and see what each actually costs.</p>
+                    <p>Every adjustment recalculates the blend and pricing instantly across all suppliers.</p>
+                </div>
+                <div class="hiw-step-img">
+                    <img src="assets/step11.png" alt="Fine tune — nitrogen and capital sliders">
+                </div>
+            </div>
+
+            <div class="hiw-step">
+                <div class="hiw-step-text">
+                    <h3>Review the full breakdown</h3>
+                    <p>Tap any supplier to see the detailed blend — exactly which products are included, rates per hectare, nutrient delivery by element, and the full cost breakdown with cartage, blending, and spreading shown separately.</p>
+                    <p>If the supplier participates in the platform you can place your order directly through the app. For suppliers not yet on the platform, the plan and pricing are still shown — you place the order with them directly.</p>
+                </div>
+                <div class="hiw-step-img">
+                    <img src="assets/step16.png" alt="Blend detail — products, nutrients, total cost">
+                </div>
+            </div>
         </div>
 
-        <!-- SECTION 4 -->
-        <div class="process-step">
-            <h2>Its all in the numbers....</h2>
-            <p class="step-intro"></p>
-
-            <img src="assets/step4.png" class="process-image" alt="">
-        </div>
-
-
-        <!-- SECTION 5 -->
-        <div class="process-step">
-            <h2>The app requires 12 inputs from your soil test to work...</h2>
-            <p class="step-intro"></p>
-
-            <img src="assets/step5.png" class="process-image" alt="">
-            <img src="assets/step5a.png" class="process-image" alt="">
-        </div>
-
-
-        <!-- SECTION 10 -->
-        <div class="process-step">
-            <h2>Options! Who to choose?</h2>
-            <p class="step-intro"></p>
-
-            <img src="assets/step10.png" class="process-image" alt="">
-        </div>
-
-        <!-- SECTION 10a -->
-        <div class="process-step">
-            <h2>Refine your estimated on ground costs here..</h2>
-            <p class="step-intro"></p>
-
-            <img src="assets/step10a.png" class="process-image" alt="">
-        </div>
-
-        <!-- SECTION 11 -->
-        <div class="process-step">
-            <h2>Fine tune your inputs here..</h2>
-            <p class="step-intro"></p>
-
-            <img src="assets/step11.png" class="process-image" alt="">
-            <img src="assets/step11a.png" class="process-image" alt="">
-            <img src="assets/step11b.png" class="process-image" alt="">
-        </div>
-
-
-
-
-
-        <!-- FINAL -->
-        <div class="process-step">
+        <!-- CLOSING -->
+        <div class="hiw-closing">
             <h2>One workflow. Full visibility. Clear decisions.</h2>
+            <p>From soil test to signed-off fertiliser plan, GrowMore gives you the information to make a confident call — based on what your soil actually needs.</p>
+            <div class="hiw-badges">
+                <a href="https://apps.apple.com/nz/app/growmore-virtual-agronomist/id6773807170" target="_blank" rel="noopener">
+                    <img src="assets/Download_on_the_App_Store_Badge_US-UK_RGB_wht_092917.svg" alt="Download on the App Store">
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=nz.co.growmorespt.growmore&pcampaignid=web_share" target="_blank" rel="noopener">
+                    <img src="assets/GetItOnGooglePlay_Badge_Web_color_English.svg" alt="Get it on Google Play">
+                </a>
+            </div>
         </div>
-    </div>
 
+    </div>
 </section>
 
 </body>

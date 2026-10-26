@@ -3,60 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | GrowMore</title>
+    <title>Contact | GrowMore Virtual Agronomist</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 40px 48px; margin-top: 48px; text-align: left; }
+        .contact-block h3 { font-size: 18px; font-weight: 700; margin: 0 0 12px; }
+        .contact-block p { font-size: 15px; line-height: 1.7; opacity: 0.75; margin: 0 0 8px; }
+        .contact-block a { color: inherit; }
+        @media (max-width: 640px) { .contact-grid { grid-template-columns: 1fr; } }
+    </style>
     <script defer src="main.js"></script>
 </head>
 <body>
-
 <header class="nav">
     <div class="nav-container">
-        <div class="nav-logo">
-            <a href="index.html">
-                <img src="assets/growmore_logo.png" alt="GrowMore" class="logo-img">
-            </a>
-        </div>
-
+        <div class="nav-logo"><a href="index.html"><img src="assets/growmore_logo.png" alt="GrowMore" class="logo-img"></a></div>
         <nav class="nav-links" id="navLinks">
-            <a href="about.html">About</a>
-            <a href="how-it-works.html">How It Works</a>
-            <a href="international.html">International</a>
-            <a href="testimonials.html">Testimonials</a>
-            <a href="download.html">Download</a>
-            <a href="faq.html">FAQ</a>
-            <a href="contact.html">Contact</a>
+            <a href="index.html">About</a><a href="how-it-works.html">How It Works</a><a href="international.html">International</a><a href="testimonials.html">Testimonials</a><a href="download.html">Download</a><a href="faq.html">FAQ</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="contact.html">Contact</a>
         </nav>
-
         <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-
     </div>
 </header>
-
 <section class="page">
     <div class="page-container">
-
         <h1>Contact</h1>
-
-        <p class="page-intro">
-            For enquiries, early access, or partnerships.
-        </p>
-
-        <div class="process-step">
-            <p>
-                GrowMore Soil & Pasture Tuning<br>
-                Waikato, New Zealand
-            </p>
-        </div>
-
-        <div class="process-step">
-            <h2>Email</h2>
-            <p>
-                <a href="mailto:info@growmorespt.co.nz">info@growmorespt.co.nz</a>
-            </p>
-        </div>
-
+        <p class="page-intro">Questions, feedback, supplier enquiries, or international interest — we'd like to hear from you.</p>
+        <div class="contact-grid">
+            <div class="contact-block">
+                <h3>General enquiries</h3>
+                <p>Questions about the app, your account, or how GrowMore works.</p>
+                <p><a href="mailto:info@growmorespt.co.nz">info@growmorespt.co.nz</a></p>
+            </div>
+            <div class="contact-block">
+                <h3>Support</h3>
+                <p>Something not working, or a soil test the app won't take? Tell us what you were doing when it happened.</p>
+                <p><a href="mailto:support@growmorespt.co.nz">support@growmorespt.co.nz</a></p>
+            </div>
+            <div class="contact-block">
+                <h3>Suppliers</h3>
+                <p>Interested in listing your products on GrowMore and enabling in-app ordering? Get in touch to discuss participation and commission rates.</p>
+                <p><a href="mailto:suppliers@growmorespt.co.nz">suppliers@growmorespt.co.nz</a></p>
+            </div>
+            <div class="contact-block">
+                <h3>International</h3>
+                <p>Exploring bringing GrowMore to a market outside New Zealand? We're open to conversations about partnerships and regional adaptation.</p>
+                <p><a href="mailto:international@growmorespt.co.nz">international@growmorespt.co.nz</a></p>
+            </div>
+            <div class="contact-block">
+                <h3>Media</h3>
+                <p>Press enquiries, interviews, and requests for comment on soil fertility or fertiliser pricing in New Zealand.</p>
+                <p><a href="mailto:media@growmorespt.co.nz">media@growmorespt.co.nz</a></p>
+            </div>
+            <div class="contact-block">
+                <h3>Legal and privacy</h3>
+                <p>Terms of use, privacy, data requests, and anything else of a legal nature.</p>
+                <p><a href="mailto:legal@growmorespt.co.nz">legal@growmorespt.co.nz</a></p>
+            </div>
+            <div class="contact-block">
+                <h3>Download the app</h3>
+                <p>Free on iPhone and Android.</p>
+                <p><a href="https://apps.apple.com/nz/app/growmore-virtual-agronomist/id6773807170" target="_blank" rel="noopener">App Store</a> &nbsp;&middot;&nbsp; <a href="https://play.google.com/store/apps/details?id=nz.co.growmorespt.growmore" target="_blank" rel="noopener">Google Play</a></p>
+            </div>
+            </div>
     </div>
 </section>
-
+<script>function toggleMenu(){document.getElementById("navLinks").classList.toggle("active");}</script>
 </body>
 </html>

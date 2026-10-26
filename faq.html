@@ -3,23 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQ | GrowMore</title>
+    <title>FAQ | GrowMore Virtual Agronomist</title>
+    <meta name="description" content="Frequently asked questions about GrowMore — the science, the suppliers, the commission model, and how to get the most out of the app.">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .faq-section {
+            max-width: 760px;
+            margin: 0 auto;
+        }
+
+        .faq-category {
+            margin: 48px 0 8px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--accent, #5bb8f5);
+            opacity: 0.8;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            color: inherit;
+            font-size: 16px;
+            font-weight: 600;
+            text-align: left;
+            padding: 20px 40px 20px 0;
+            cursor: pointer;
+            position: relative;
+            line-height: 1.4;
+            font-family: inherit;
+        }
+
+        .faq-question::after {
+            content: "+";
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 22px;
+            font-weight: 300;
+            color: rgba(255,255,255,0.4);
+            transition: transform 0.2s, color 0.2s;
+            line-height: 1;
+        }
+
+        .faq-item.open .faq-question::after {
+            transform: translateY(-50%) rotate(45deg);
+            color: rgba(255,255,255,0.7);
+        }
+
+        .faq-answer {
+            display: none;
+            padding: 0 0 20px;
+        }
+
+        .faq-item.open .faq-answer {
+            display: block;
+        }
+
+        .faq-answer p {
+            font-size: 15px;
+            line-height: 1.75;
+            opacity: 0.75;
+            margin: 0;
+        }
+    </style>
     <script defer src="main.js"></script>
 </head>
 <body>
 
 <header class="nav">
     <div class="nav-container">
-
         <div class="nav-logo">
             <a href="index.html">
                 <img src="assets/growmore_logo.png" alt="GrowMore" class="logo-img">
             </a>
         </div>
-
         <nav class="nav-links" id="navLinks">
-            <a href="about.html">About</a>
+            <a href="index.html">About</a>
             <a href="how-it-works.html">How It Works</a>
             <a href="international.html">International</a>
             <a href="testimonials.html">Testimonials</a>
@@ -29,224 +97,233 @@
             <a href="terms.html">Terms</a>
             <a href="contact.html">Contact</a>
         </nav>
-
         <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-
     </div>
 </header>
 
 <section class="page">
-
     <div class="page-container">
 
         <h1>Frequently Asked Questions</h1>
-        <p class="page-intro">
-            Straight answers for practical farmers.
-        </p>
+        <p class="page-intro">Straight answers for practical farmers.</p>
 
         <div class="faq-section">
+
+            <div class="faq-category">About the app</div>
 
             <div class="faq-item">
                 <button class="faq-question">Who is this app for?</button>
                 <div class="faq-answer">
-                    <p>It’s for Dairy or Drystock Farmers grazing ruminant animals on semi-permanent pasture composing mainly of grasses and preferably with a good proportion of clover for Nitrogen fixation.</p>
+                    <p>It's for Dairy or Drystock Farmers grazing ruminant animals on semi-permanent pasture composing mainly of grasses and preferably with a good proportion of clover for Nitrogen fixation.</p>
                 </div>
             </div>
 
             <div class="faq-item">
                 <button class="faq-question">Can I use it for another style of farming?</button>
                 <div class="faq-answer">
-                    <p>Not without some qualifiers. If you are a cut and carry operation or a turf farmer without the benefit of the return of dung and urine or without a healthy clover population then you might need a slightly different balance of nutrients to get the most out of your soil.</p>
+                    <p>Not without some qualifiers. If you are a cut and carry operation or a turf farmer without the benefit of the return of dung and urine, or without a healthy clover population, you might need a slightly different balance of nutrients to get the most out of your soil.</p>
                 </div>
             </div>
 
             <div class="faq-item">
-                <button class="faq-question">Can I use it for my Orchard or my cropping land?</button>
+                <button class="faq-question">Can I use it for my orchard or cropping land?</button>
                 <div class="faq-answer">
-                    <p>Many orchard fruits and some crops prefer low chloride sources of Potassium. The pasture based part of the app is designed to deliver least cost recommendations which will most often favour the cheaper less refined Muriate of Potash, which is mined from ancient lake and seabed deposits.</p>
+                    <p>Many orchard fruits and some crops prefer low chloride sources of Potassium. The pasture-based part of the app is designed to deliver least cost recommendations which will most often favour the cheaper, less refined Muriate of Potash. This may not be ideal for horticultural applications.</p>
                 </div>
             </div>
+
+            <div class="faq-item">
+                <button class="faq-question">Is the app free?</button>
+                <div class="faq-answer">
+                    <p>Yes — free to download and free to use. GrowMore earns a commission from participating suppliers when orders are placed through the app, at the same flat rate from every supplier. That's the business model. There's no subscription, no paywall, and no cost to the farmer.</p>
+                </div>
+            </div>
+
+            <div class="faq-category">The science</div>
 
             <div class="faq-item">
                 <button class="faq-question">Why should I trust an app?</button>
                 <div class="faq-answer">
-                    <p>Because the Science behind it is well understood. And the observations made by the Science can be well described using Math. And computer code is very good at math - perfect even. That’s not to say the app can overcome poor soil sampling protocols - it can’t.</p>
+                    <p>Because the science behind it is well understood. The observations made by the science can be well described using mathematics. And computer code is very good at mathematics — perfect even. That's not to say the app can overcome poor soil sampling protocols — it can't. But the fundamentals of plant nutrition have been established over decades, with local NZ research calibrating exactly how much of each nutrient is needed to achieve optimal pasture production under our conditions.</p>
                 </div>
             </div>
 
             <div class="faq-item">
-                <button class="faq-question">Who should I get to do my soil samples then?</button>
+                <button class="faq-question">My current consultant is a guru and has been with me for years. Why would I need this?</button>
                 <div class="faq-answer">
-                    <p>You can use your existing nutrient advisor or independent agronomist or you can give it a go yourself for a truly independent take. The fertiliser association of New Zealand has a helpful instruction manual which you can find here https://www.fertiliser.org.nz/resources/booklets .</p>
+                    <p>Science and gurus make for uncomfortable bedfellows. If your consultant is truly operating from a scientific perspective, the recommendations you receive from them should be very close to what the app recommends. Of course, most reps won't tell you what the competition's pricing is — which the app will. Think of it like Webjet for fertiliser.</p>
                 </div>
             </div>
 
             <div class="faq-item">
-                <button class="faq-question">Science has been known to be wrong, how can I be sure of getting accurate recommendations?</button>
+                <button class="faq-question">My consultant says an app can't replace the human eye.</button>
                 <div class="faq-answer">
-                    <p>Science does get a bad rap, usually when politicians hijack it for their own purposes, but it does self-correct and the fundamentals of plant growth, what nutrients are required and how they affect production have been established over decades with only slight modification.</p>
+                    <p>Ask them how many times they depart from what a soil test result says when making their recommendations.</p>
                 </div>
             </div>
 
             <div class="faq-item">
-                <button class="faq-question">My current consultant is a guru and he has been with me for years. Why would I need an app like this?</button>
+                <button class="faq-question">Science has been known to be wrong. How can I be sure of accurate recommendations?</button>
                 <div class="faq-answer">
-                    <p>Science and gurus make for uncomfortable bedfellows. If your consultant is truly operating from a scientific perspective the recommendations you receive from them should be the same as what the app recommends. Of course most rep’s won’t tell you what the competitions pricing is - which the app will. Think of it like a webjet for Fertiliser.</p>
+                    <p>Science does self-correct, and the fundamentals of plant growth — what nutrients are required and how they affect production — have been established over decades with only slight modification. The calibration data underpinning this app is based on NZ-specific research, not general assumptions.</p>
+                </div>
+            </div>
+
+            <div class="faq-category">Suppliers and independence</div>
+
+            <div class="faq-item">
+                <button class="faq-question">How does GrowMore stay independent if it earns commissions from suppliers?</button>
+                <div class="faq-answer">
+                    <p>Because every participating supplier pays the same commission rate. There are no preferred placements, no higher rates for certain brands, no commercial relationships that influence the ranking. The order in which suppliers appear is determined purely by on-ground cost calculated from your soil test. We have no financial reason to favour one supplier over another — that equal treatment is the basis of independence.</p>
                 </div>
             </div>
 
             <div class="faq-item">
-                <button class="faq-question">My guru says an app can’t replace the human eye.</button>
+                <button class="faq-question">What happens if a supplier isn't on the platform?</button>
                 <div class="faq-answer">
-                    <p>Ask them how many times they depart from what a soil test result says in making their recommendations.</p>
+                    <p>They still appear in your pricing results. We show their product catalogue and pricing — you just need to place the order with them directly rather than through the app. Our hope is that as farmers use the platform and suppliers see the volume it generates, more will choose to participate and enable in-app ordering.</p>
                 </div>
             </div>
 
             <div class="faq-item">
-                <button class="faq-question">Will the app help me grow more Pasture?</button>
+                <button class="faq-question">I'm a shareholder in a co-operative fertiliser supplier. Isn't it disloyal to be shopping around?</button>
                 <div class="faq-answer">
-                    <p>Possibly, depends on how far off from optimal your soil test results are.</p>
+                    <p>Perhaps. But it could also be termed disloyal of co-operatives to offer discounted products to individual farms to retain business — after all, their discount is your cost. Sunlight is the best disinfectant. The app just offers illumination.</p>
+                </div>
+            </div>
+
+            <div class="faq-category">Fertiliser decisions</div>
+
+            <div class="faq-item">
+                <button class="faq-question">Will the app help me grow more pasture?</button>
+                <div class="faq-answer">
+                    <p>Possibly — it depends on how far from optimal your soil test results currently are. If nutrient levels are already well managed, the immediate benefit is price comparison. If levels are below optimal, there's likely genuine production to be gained from a well-planned programme.</p>
                 </div>
             </div>
 
             <div class="faq-item">
                 <button class="faq-question">How much pasture should I be growing?</button>
                 <div class="faq-answer">
-                    <p>Between 12 and 20 t/ha of DM would be a good range. Less when droughts persist and a wet spring with lack of sunlight hinders recovery after grazing.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question">What kind of production levels are Farmers using the science capable of?</button>
-                <div class="faq-answer">
-                    <p>It’s not unusual for good Farmers feeding 70% or more home grown pasture to produce 1100-1700 kg ms/ha with 600kg ms/cow regularly achieved.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question">I’m a shareholder in the co-operative fertiliser suppliers. Isn’t it disloyal to be “shopping around”?</button>
-                <div class="faq-answer">
-                    <p>Perhaps. But it could also be termed disloyal of co-operatives to offer discounted products to individual farms to retain and win business – after all their discount is your cost. Sunlight is the best disinfectant they say. The app just offers illumination.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question">What about Nitrogen. How does the app deal with this element?</button>
-                <div class="faq-answer">
-                    <p>It’s a personal preference within the app, kind of like having fries with your order. If you want Nitrogen included with your recommendation you opt in through Fine Tuning. You can also specify whether you prefer a non volatilisation Nitrogen product. It’s up to you.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question">Will the app police how much Nitrogen I’m using?</button>
-                <div class="faq-answer">
-                    <p>No – sorry, but there are plenty of other compliance tools that will ensure you don’t go over your cap. Just be sensible about it.</p>
+                    <p>Between 12 and 20 t/ha of DM would be a good range for most NZ pastoral farms. Less when droughts persist or a wet spring with lack of sunlight hinders recovery after grazing. Top farmers feeding 70% or more home-grown pasture regularly achieve 1,100–1,700 kg MS/ha with 600 kg MS/cow.</p>
                 </div>
             </div>
 
             <div class="faq-item">
                 <button class="faq-question">How much fertiliser should I be putting on?</button>
                 <div class="faq-answer">
-                    <p>In a nutshell, enough to replace what is leaving the farm. Or, if the nutrient levels are below optimal, either enough to build them up - after covering what is leaving - or as much as your budget permits!</p>
+                    <p>In a nutshell, enough to replace what is leaving the farm. Or, if the nutrient levels are below optimal, enough to build them up — after covering what is leaving — or as much as your budget permits. Every ton of dry matter produced contains around 5% mineral. A 20 t/ha annual DM yield means around a ton of nutrient element has been pulled from the soil.</p>
                 </div>
             </div>
 
             <div class="faq-item">
-                <button class="faq-question">How do I know what is leaving the farm?</button>
+                <button class="faq-question">What about Nitrogen? How does the app deal with it?</button>
                 <div class="faq-answer">
-                    <p>Every ton of dry matter produced contains around 5% of mineral (not including Nitrogen). A 20 t/ha annual DM yield means around a ton of nutrient element has been pulled from the soil. Calcium and Potassium dominate with lesser proportions of Phosphorus, Sulphur, Magnesium and often Sodium and even less of the trace elements. Soil and plant testing is the best means of knowing with some degree of certainty how the levels in the soil are changing over time.</p>
+                    <p>Nitrogen is a personal preference within the app — kind of like having fries with your order. If you want N included with your recommendation you opt in through Fine Tuning. You can also specify whether you prefer a non-volatilisation Nitrogen product. It's up to you. The app won't police how much Nitrogen you're using — there are plenty of other compliance tools for that.</p>
                 </div>
             </div>
 
             <div class="faq-item">
                 <button class="faq-question">Will the app tell me how much is optimal?</button>
                 <div class="faq-answer">
-                    <p>It will. But if the budget does not permit such expense, you can easily scale back capital inputs to a level you are comfortable with. The Fine Tuning menu has handy Capital P and K sliders that allow for this. The default behaviour for both of these is set to 0%.</p>
+                    <p>It will. But if the budget doesn't permit the full capital input, you can easily scale back using the Fine Tuning sliders for Capital P and Capital K. The default behaviour for both is set to 0% — meaning maintenance-only unless you actively choose to build.</p>
+                </div>
+            </div>
+
+            <div class="faq-category">Soil tests and labs</div>
+
+            <div class="faq-item">
+                <button class="faq-question">Who should I get to do my soil samples?</button>
+                <div class="faq-answer">
+                    <p>You can use your existing nutrient advisor, an independent agronomist, or do it yourself for a truly independent result. The Fertiliser Association of New Zealand has a helpful instruction manual at fertiliser.org.nz/resources/booklets.</p>
                 </div>
             </div>
 
             <div class="faq-item">
                 <button class="faq-question">Which lab should I use?</button>
                 <div class="faq-answer">
-                    <p>Any lab able to run the suite of tests we have adopted as standards in New Zealand is good. International labs are fine too, but some of their results may need to be translated into New Zealand equivalents which can introduce a further margin of error.</p>
+                    <p>Any lab able to run the suite of tests adopted as standards in New Zealand is fine. International labs are acceptable too, but some results may need to be translated into NZ equivalents which can introduce a further margin of error.</p>
                 </div>
             </div>
 
             <div class="faq-item">
                 <button class="faq-question">What if my lab has only provided a Mehlich 3 P test result?</button>
                 <div class="faq-answer">
-                    <p>NZ soil science is built on empirical studies utilising the Olsen P lab extract and the calibration details, such as how many kilograms of actual Phosphorus are required to change that test result, and the change in production linked to that change in result, are linked to this extract.</p>
+                    <p>NZ soil science is built on empirical studies using the Olsen P lab extract. The calibration details — how many kilograms of phosphorus are required to change the test result, and what production change is linked to that — are all linked to the Olsen P extract. If you only have a Mehlich 3 result, it would need to be converted to an Olsen P equivalent, which introduces additional uncertainty.</p>
                 </div>
             </div>
 
             <div class="faq-item">
-                <button class="faq-question">What if my consultant tells me the Mehlich 3 test is superior?</button>
+                <button class="faq-question">I have a big block — what if I want to use more than one soil test?</button>
                 <div class="faq-answer">
-                    <p>Ask them how they calculate how many kg of Phosphate are required to change the Mehlich 3 test result from X ppm to Y ppm and how they arrived at that calculation. If they translate the Mehlich result into Olsen P equivalents then they are using Olsen P calibrations on a Mehlich 3 test result.</p>
+                    <p>The app can perform a weighted average on your soil test results. Use the hectare slider to apportion each soil test result accordingly. So if you have a 100 hectare block with 3 samples covering 20ha, 30ha and 50ha, the 20ha sample won't unduly skew the result. Alternatively, for a non-weighted result, set each sample to the full area of the block and the app will apply a uniform average.</p>
                 </div>
             </div>
 
             <div class="faq-item">
-                <button class="faq-question">Is the Mehlich 3 P test extract a better extract?</button>
+                <button class="faq-question">What if I have more than one soil type on a block?</button>
                 <div class="faq-answer">
-                    <p>Better for who?. It’s certainly better for the labs. In general due to its stronger dissolving properties it will extract “more” phosphate from the soil sample. Hence Mehlich 3 numbers will appear higher than Olsen P numbers. This isn’t to say that the Mehlich 3 number should be read as being “within target range” when an Olsen P test result is “below optimum”. An appropriate Mehlich 3 target for the same soil would likely be higher than an Olsen target however that Calibration work has not been undertaken.</p>
+                    <p>The app can only deal with single soil types when calculating a fertiliser application. You can choose to make a single fertiliser application cover more than one block provided they are the same soil type. If they are different, you should consider creating a separate fertiliser application for each soil type.</p>
+                </div>
+            </div>
+
+            <div class="faq-category">Technical options</div>
+
+            <div class="faq-item">
+                <button class="faq-question">What is the BCSR option?</button>
+                <div class="faq-answer">
+                    <p>BCSR stands for Base Cation Saturation Ratio. It's an alternative interpretation of soil cation balance — calcium, magnesium, potassium and sodium — expressed as percentages of the total cation exchange capacity. It has been persistent in certain agronomy circles and is included as an option. It often results in higher levels of magnesium being recommended. User discretion is advised — it should be understood as an alternative lens, not a replacement for SLAN-based recommendations.</p>
                 </div>
             </div>
 
             <div class="faq-item">
-                <button class="faq-question">What about Lime - will the app calculation how much I need to apply?</button>
+                <button class="faq-question">What does the Regenerative option mean?</button>
                 <div class="faq-answer">
-                    <p>Coming soon.</p>
+                    <p>Regenerative in the context of this app means a preference for less acidulated forms of Phosphorus and dechlorinated Potassium sources. It adjusts the product selection toward less processed mineral inputs where available from participating suppliers.</p>
                 </div>
             </div>
 
             <div class="faq-item">
-                <button class="faq-question">What does the “Regenerative” option mean in the app?</button>
+                <button class="faq-question">Should I bother with trace elements?</button>
                 <div class="faq-answer">
-                    <p>Regenerative in the context of this app means a preference for less acidulated forms of Phosphorus and dechlorinated Potassium sources.</p>
+                    <p>Up to you. Plants require 17 elements to grow — and trace elements matter more than their small quantities suggest. The best way to know for sure is a relevant herbage tissue test: Clover only for Boron and Molybdenum, Mixed Pasture for everything else. The app can prescribe the relevant trace element inclusions to move from deficient into the green zone.</p>
                 </div>
             </div>
 
             <div class="faq-item">
-                <button class="faq-question">Are there any situations the App will not provide good recommendations?</button>
+                <button class="faq-question">What about Lime — will the app calculate how much I need?</button>
                 <div class="faq-answer">
-                    <p>If your farm is in a desert or a rain-forest then it is highly likely that fertiliser is not your limiting factor and you should look to farming alternative pasture species and or animals. Some common sense is appropriate.</p>
+                    <p>Yes. The app works out an Ag-Lime rate in tonnes per hectare from your soil pH, shown on its own Lime tab alongside the supply options. In the current release it is a recommendation only — lime is not added to your order with the fertiliser blend.</p>
                 </div>
             </div>
 
             <div class="faq-item">
-                <button class="faq-question">Should I bother with Trace elements?</button>
+                <button class="faq-question">Are there any situations the app won't provide good recommendations?</button>
                 <div class="faq-answer">
-                    <p>Up to you. It used to be that Plants required 16 elements to grow but with the more recent inclusion of nickel that’s now 17. The best way to know for sure is to have a relevant herbage tissue test to hand. Clover only for Boron and Molybdenum and Mixed Pasture for everything else. The app can prescribe the relevant trace elements inclusion to move out of “deficient” and into the green zone.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question">I have a big block, what If I want to use more than one soil test to guide my fertiliser decision?</button>
-                <div class="faq-answer">
-                    <p>The app can perform a weighted average on your soil test results. Just use the hectare slider to apportion each soil test results accordingly. So if you have a 100 hectare block with 3 samples covering 20ha, 30ha and 50ha then the test result for the 20ha won’t unduly affect the result. Alternatively for a non-weighted result, set each sample to the area of the block and the app will apply a uniform average.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question">What If I have more than one soil type on a block? How do I set that up?</button>
-                <div class="faq-answer">
-                    <p>The app can only deal with single soil types to calculate a fertiliser application. You can choose to make a single fertiliser application cover more than one block provided they are the same soil type. But if they are different you should consider creating a separate Fertiliser application.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question">What is this BCSR option for calculating nutrient requirements?</button>
-                <div class="faq-answer">
-                    <p>That’s a can of worms for sure and it’s definitely not everyone’s cup of tea. But it has been remarkably persistent in certain circles so it has been included as an option within the app. BCSR nutrient targets are expressed in percentage terms which are then translated into kg/ha and compared with your soil test results - also translated into kg/ha - to derive an “application rate”. A critical part of this calculation is the depth of soil we are contemplating and the bulk density of that soil. It will often result in higher levels of magnesium being recommended but if you were targeting a level optimised for animal health within the conventional model you would also put on more magnesium. User discretion is advised.</p>
+                    <p>If your farm is in a desert or a rainforest then fertiliser is likely not your limiting factor and you should look to farming alternative pasture species or animals. For NZ pastoral farms operating under normal rainfall conditions, the app is designed to work well. Some common sense is always appropriate.</p>
                 </div>
             </div>
 
         </div>
 
     </div>
-
 </section>
+
+<script>
+    document.querySelectorAll('.faq-question').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const item = btn.parentElement;
+            const isOpen = item.classList.contains('open');
+            // Close all
+            document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+            // Open this one if it was closed
+            if (!isOpen) item.classList.add('open');
+        });
+    });
+
+    function toggleMenu() {
+        document.getElementById("navLinks").classList.toggle("active");
+    }
+</script>
 
 </body>
 </html>
